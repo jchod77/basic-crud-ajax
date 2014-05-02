@@ -1,0 +1,20 @@
+<h1>Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <%= erb :_contact_row, layout: false, locals: { contact: contact } %>
+    <% end %>
+  </tbody>
+</table>
+<a id="add_link" href="/contacts/new">Add Contact</a>

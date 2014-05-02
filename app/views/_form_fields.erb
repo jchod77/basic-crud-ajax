@@ -1,0 +1,20 @@
+<div>
+  <label for="first_name">First Name: </label>
+  <input id="first_name" type="text" name="contact[first_name]" value="<%= @contact.try(:first_name) %>">
+</div>
+<div>
+  <label for="last_name">Last Name: </label>
+  <input id="last_name" type="text" name="contact[last_name]" value="<%= @contact.try(:last_name) %>">
+</div>
+
+<div>
+  <label for="phone">Phone: </label>
+  <input id="phone" type="tel" name="contact[phone]" value="<%= @contact.try(:phone) %>">
+</div>
+<div>
+  <label for="email">Email: </label>
+  <input id="email" type="email" name="contact[email]" value="<%= @contact.try(:email) %>">
+</div>
+<div>
+  <input type="submit">
+</div>
